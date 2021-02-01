@@ -3,3 +3,4 @@
 
 ### Members:
 #### Zac Neuhardt
+#### Bhargvi Handa
