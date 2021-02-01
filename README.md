@@ -4,3 +4,4 @@
 ### Members:
 #### Zac Neuhardt
 #### Bhargvi Handa
+#### Gabe Huerta
