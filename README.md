@@ -5,3 +5,4 @@
 #### Zac Neuhardt
 #### Bhargvi Handa
 #### Gabe Huerta
+#### Jason Hajduk
