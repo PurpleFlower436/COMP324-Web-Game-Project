@@ -6,3 +6,4 @@
 #### Bhargvi Handa
 #### Gabe Huerta
 #### Jason Hajduk
+#### Emily Daly
