@@ -3,13 +3,26 @@
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Scenario</title>
 </head>
-<style>
+<style type="text/css">
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF ;
+  }
+  h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'arial';
+    position: absolute;
+    top: 70%;
+    left: 13%;
+  }
 
-
-    /* This controls the animation for the story text. It makes it slide across the screen from right to left */
-  p {
+  h1 {
     animation-duration: 3s;
     animation-name: slidein;
     }
@@ -25,47 +38,44 @@
           overflow: hidden;
   }
 
-
     /* Creates the gold buttons for the user options */
-   .button {
-  background-color: #FFD700; /* Gold */
-  border: none;
-  color: Black;
+    .button {
+  display: inline;
+  padding: 10px 20px;
+  font-size: 35px;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 300px 2px;
-  cursor: pointer;
-  border-radius: 12px;
+  outline: none;
+  color: #000000;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
-    /* Centers the buttons to the middle of the page */
-    /* Just figure out how to move the buttons more towards the bottom of the page so there's space for the picture! */
-   .text-center {
+.button:hover {background-color: #FFD700}
+
+.button:active {
+  background-color: #FFD700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.text-center {
    text-align: center;
    }
-
-
-
-    .button1 {padding: 20px 30px;}
-    .button2 {padding: 20px 40px;}
-
 
 
 </style>
 </head>
 <body style="background-color:white;">
-<p style= "color:black; font-size:50px;"> You have just encountered a Cyclops. What will you do?</p>
-
+  <h1>You have just encountered a cyclops.
+     What do you do?</h1>
+<body>
 <div class="text-center">
-    <button class="button button1">Throw some stones at it to make it go away</button>
-    <button class="button button2">Take out your sword and fight it</button>
+<button class="button">Take out your sword and fight it.</button>
+<button class="button">Throw some stones at it to make it go away.</button>
 </div>
-
-
-
-
-
 </body>
 </html>
