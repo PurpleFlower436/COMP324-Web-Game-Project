@@ -1,0 +1,20 @@
+{
+  "name": "COMP324-project",
+  "version": "1.0.0",
+  "description": "Choose Your Own Adventure Game",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZacNeu/COMP324-Web-Game-Project.git"
+  },
+  "keywords": ["web game", "adventure", "roman", "story"],
+  "author": "Emily Daly, Bhargvi Handa, Adeline Azungue, Jason Hajduk, Zac Neuhardt, Gabe Huerta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZacNeu/COMP324-Web-Game-Project/issues"
+  },
+  "homepage": "https://github.com/ZacNeu/COMP324-Web-Game-Project#readme"
+}
