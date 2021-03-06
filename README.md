@@ -7,3 +7,4 @@
 #### Gabe Huerta
 #### Jason Hajduk
 #### Emily Daly
+#### Adeline Azungue
