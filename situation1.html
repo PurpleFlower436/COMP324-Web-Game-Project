@@ -3,43 +3,30 @@
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Scenario</title>
+    <title>Scenario 1</title>
 </head>
-<style type="text/css">
-  body {
-    padding: 0;
-    margin: 0;
-    background-color: #FFFFFF ;
-  }
+<style>
+
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    /* Creates the story text */
   h1 {
-    font-size: 3em;
+    font-size: 35px;
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: 'arial';
+    font-family: 'Bitstream Cyberbit';
     position: absolute;
-    top: 70%;
-    left: 13%;
-  }
-
-  h1 {
-    animation-duration: 3s;
-    animation-name: slidein;
-    }
-    @keyframes slidein {
-        from {
-        margin-left: 100%;
-        width: 300%
-        }
-        to {
-            margin-left: 0%;
-            width: 100%;
-            }
-          overflow: hidden;
+    top: 55%;
+    left: 8%;
   }
 
     /* Creates the gold buttons for the user options */
-    .button {
+    .button1 {
   display: inline;
   padding: 10px 20px;
   font-size: 35px;
@@ -52,11 +39,42 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
+  position: fixed;
+  bottom: 40px;
+  right: 160px;
 }
 
-.button:hover {background-color: #FFD700}
+   /* Creates the hover effect for the button */
+    .button1:hover {background-color: #FFD700}
 
-.button:active {
+   /*Creates the box shadow for the buttons */
+  .button1:active {
+  background-color: #FFD700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+  .button2 {
+  display: inline;
+  padding: 10px 20px;
+  font-size: 35px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: fixed;
+  bottom: 40px;
+  right: 900px;
+}
+.button2:hover {background-color: #FFD700}
+
+.button2:active {
   background-color: #FFD700;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
@@ -69,13 +87,15 @@
 
 </style>
 </head>
-<body style="background-color:white;">
-  <h1>You have just encountered a cyclops.
-     What do you do?</h1>
-<body>
+<body style="background-color:IndianRed;">
+    <img src = "Small camp 2.0.jpg" alt="camp" width="1596" height="1008">
+
+  <h1>You have just escaped Julius Caesar’s prison but you don’t remember what happened that led you to be put in prison.
+      You decide to move to a town where your uncle is the king.
+      You arrive in a nearby kingdom and realize that you need money to either find a place to sleep or get food. What do you do?</h1>
 <div class="text-center">
-<button class="button">Take out your sword and fight it.</button>
-<button class="button">Throw some stones at it to make it go away.</button>
+<button class="button1">Rob someone for money. </button>
+<button class="button2">Beg for money.</button>
 </div>
 </body>
 </html>
