@@ -4,17 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Home Screen</title>
-        <link href="index.css" ref="stylesheet">
         <script src="index.js"></script>
     </head>
     
-    <style>
-    </style>
-    
     <body>
-
-        <!-- Home Screen HTML Goes Here -->
-
 
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
@@ -40,6 +33,40 @@
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
         </script>
+
+        <!-------**HOME SCREEN HTML**------->
+
+        <h1>*Game Name*</h1>
+        <div>
+            <button>New Game</button>
+            <button>Load Game</button>
+            <button>Settings</button>
+        </div>
+
     </body>
+
+    <style>
+        h1 {
+            margin: auto;
+            height: 50%;
+            font-size: xx-large;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+        }
+        div {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div button {
+            font-size: 24px;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-top: 50%;
+        }
+    </style>
 
 </html>
