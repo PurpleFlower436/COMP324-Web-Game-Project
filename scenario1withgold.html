@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>scenario 1</title>
+</head>
+<p id="scene1"></p>
+<style>
+
+    /* makes the image be at the left */
+    img {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    aside {
+            float: right;
+            margin-left: 20px;
+            width: 30%;
+            border: 60px Indianred;
+            padding: 10px;
+        }
+    /* Creates the story text */
+  #textbox {
+    border-radius: 25px;
+    background: #333333;
+    padding: 20px;
+    width: 590px;
+    height: 200px;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Bitstream Cyberbit';
+    position: absolute;
+    top: 10%;
+    left: 60%;
+  }
+
+    /* Creates the gold buttons for the user options */
+    .button1 {
+  display: inline;
+  padding: 5px 5px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: absolute;
+  bottom: 200px;
+  right: 30px;
+
+}
+
+
+
+
+   /* Creates the hover effect for the button */
+    .button1:hover {background-color: #FFD700}
+
+   /*Creates the box shadow for the buttons */
+  .button1:active {
+  background-color: #FFD700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+  .button2 {
+  display: inline;
+  padding: 5px 5px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: absolute;
+  bottom: 200px;
+  right: 390px;
+}
+.button2:hover {background-color: #FFD700}
+
+.button2:active {
+  background-color: #FFD700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.text-center {
+   text-align: center;
+   }
+
+</style>
+</head>
+<body style="background-color:IndianRed;">
+<img src = "camp-daytime.jpg" alt="camp" width="810" height="1080">
+  <p id="textbox"> You have just escaped Julius Caesar’s prison but you don’t remember what happened that led you to be put in prison.
+    You decide to move to a town where your uncle is the king.
+    You arrive in a nearby kingdom and realize that you need money to either find a place to sleep or get food.What do you do?
+</p>
+<script>
+    var gold = 0;
+    function rob() {
+    var z = Math.floor((Math.random() * 7) + 4);
+    document.getElementsByTagName('div')[0].innerHTML = 0;
+    document.getElementsByTagName('div')[0].innerHTML = z;}
+    function beg() {
+    var y = Math.floor((Math.random() * 5) + 1);
+    document.getElementsByTagName('div')[0].innerHTML = y;
+    }
+<!-- In the functions, you can put "location.href = 'wherever scenario 2 is';" to have it jump to the scenario 2 webpage -->
+</script>
+<div style="position:absolute; left:1400px;top:4px;width:100px;height:50px;border:1px solid #000;">0</div>
+<aside>
+<div class="text-center">
+<a onclick="rob()" class="button1">Rob someone for money.</a>
+<a onclick="beg()" class="button2">Beg for money.</a>
+</div>
+</aside>
+</body>
+</html>
