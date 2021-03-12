@@ -3,24 +3,30 @@
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Scenario 1</title>
+    <title>scenario 1</title>
 </head>
 <style>
 
-     /* Centers the image*/
+    /* makes the image be at the left */
     img {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     }
-
-    /* Creates the story text and puts it in a round text box that has a drak gray background with white text*/
+    
+    aside {
+            float: right;
+            margin-left: 20px;
+            width: 30%;
+            border: 60px Indianred;
+            padding: 10px;
+        }
+    /* Creates the story text */
   #textbox {
     border-radius: 25px;
     background: #333333;
     padding: 20px; 
-    width: 1350px;
-    height: 100px;  
+    width: 590px;
+    height: 200px;  
     font-size: 28px;
     margin: 0;
     padding: 0;
@@ -28,15 +34,15 @@
     text-align: center;
     font-family: 'Bitstream Cyberbit';
     position: absolute;
-    top: 77%;
-    left: 6%;
+    top: 10%;
+    left: 60%;
   }
 
     /* Creates the gold buttons for the user options */
     .button1 {
   display: inline;
-  padding: 10px 20px;
-  font-size: 35px;
+  padding: 5px 5px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -46,9 +52,10 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  position: fixed;
-  bottom: 9px;
-  right: 160px;
+  position: absolute;
+  bottom: 200px;
+  right: 30px;
+  
 }
 
    /* Creates the hover effect for the button */
@@ -64,8 +71,8 @@
 
   .button2 {
   display: inline;
-  padding: 10px 20px;
-  font-size: 35px;
+  padding: 5px 5px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -75,9 +82,9 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  position: fixed;
-  bottom: 9px;
-  right: 900px;
+  position: absolute;
+  bottom: 200px;
+  right: 390px;
 }
 .button2:hover {background-color: #FFD700}
 
@@ -91,18 +98,19 @@
    text-align: center;
    }
 
-
 </style>
 </head>
 <body style="background-color:IndianRed;">
-  <img src = "Camp 4.0.JPG" alt="camp" width="1350" height="650">
-
-  <p id="textbox">You have just escaped Julius Caesar’s prison but you don’t remember what happened that led you to be put in prison.
-      You decide to move to a town where your uncle is the king.
-      You arrive in a nearby kingdom and realize that you need money to either find a place to sleep or get food.What do you do?</p>
+<img src = "camp-daytime.jpg" alt="camp" width="810" height="1080">
+  <p id="textbox"> You have just escaped Julius Caesar’s prison but you don’t remember what happened that led you to be put in prison.
+    You decide to move to a town where your uncle is the king.
+    You arrive in a nearby kingdom and realize that you need money to either find a place to sleep or get food.What do you do?
+</p>
+<aside>
 <div class="text-center">
-<button class="button1">Rob someone for money. </button>
-<button class="button2">Beg for money.</button>
+<a href="Scenario3.html" class="button1">Rob someone for money.</a>
+<a href="NumberGenForScenario2.html" class="button2">Beg for money.</a>
 </div>
+</aside>
 </body>
 </html>
