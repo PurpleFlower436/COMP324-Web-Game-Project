@@ -13,6 +13,13 @@
     margin-right: auto;
     }
     
+    aside {
+            float: right;
+            margin-left: 20px;
+            width: 30%;
+            border: 60px Indianred;
+            padding: 10px;
+        }
     /* Creates the story text */
   #textbox {
     border-radius: 25px;
@@ -27,15 +34,15 @@
     text-align: center;
     font-family: 'Bitstream Cyberbit';
     position: absolute;
-    top: 0%;
+    top: 10%;
     left: 60%;
   }
 
-    /* Creates the gold buttons for the user options */
+    /* Creates the gold button for the user options */
     .button1 {
   display: inline;
   padding: 5px 5px;
-  font-size: 35px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -45,9 +52,10 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  position: fixed;
+  position: absolute;
   bottom: 200px;
   right: 5px;
+  
 }
 
    /* Creates the hover effect for the button */
@@ -61,10 +69,11 @@
 }
 
 
+  /* Creates the gold button for the user options */
   .button2 {
   display: inline;
   padding: 5px 5px;
-  font-size: 35px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -74,7 +83,7 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  position: fixed;
+  position: absolute;
   bottom: 200px;
   right: 400px;
 }
@@ -90,11 +99,9 @@
    text-align: center;
    }
 
-
 </style>
 </head>
 <body style="background-color:IndianRed;">
-  
 <img src = "camp-daytime.jpg" alt="camp" width="810" height="1080">
   <p id="textbox">You approach the town square. There are a handful of wanted posters already in eyesight, far too many to tear down.
        You see the inn off to your left, and a market place off to your right.
@@ -103,9 +110,11 @@
          You have not eaten in a couple days, but you know it will be risky to go over there.
           The path to the inn, on the other hand, is clear. What do you do?
 </p>
+<aside>
 <div class="text-center">
 <button class="button1">Go to the Marketplace. </button>
 <a href="scenario4.html" class="button2">Go to the inn.</a>
 </div>
+</aside>
 </body>
 </html>
