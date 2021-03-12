@@ -10,11 +10,19 @@
     "type": "git",
     "url": "git+https://github.com/ZacNeu/COMP324-Web-Game-Project.git"
   },
-  "keywords": ["web game", "adventure", "roman", "story"],
+  "keywords": [
+    "web game",
+    "adventure",
+    "roman",
+    "story"
+  ],
   "author": "Emily Daly, Bhargvi Handa, Adeline Azungue, Jason Hajduk, Zac Neuhardt, Gabe Huerta",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZacNeu/COMP324-Web-Game-Project/issues"
   },
-  "homepage": "https://github.com/ZacNeu/COMP324-Web-Game-Project#readme"
+  "homepage": "https://github.com/ZacNeu/COMP324-Web-Game-Project#readme",
+  "dependencies": {
+    "firebase": "^8.3.0"
+  }
 }
