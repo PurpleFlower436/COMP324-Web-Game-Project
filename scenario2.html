@@ -3,24 +3,30 @@
 <head>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <title>Scenario 2</title>
+    <title>scenario 2</title>
 </head>
 <style>
 
-       /* centers the image */
+    /* makes the image be at the left */
     img {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     }
-
+    
+    aside {
+            float: right;
+            margin-left: 20px;
+            width: 30%;
+            border: 60px Indianred;
+            padding: 10px;
+        }
     /* Creates the story text */
   #textbox {
     border-radius: 25px;
     background: #333333;
     padding: 20px; 
-    width: 1350px;
-    height: 100px;  
+    width: 600px;
+    height: 200px;  
     font-size: 28px;
     margin: 0;
     padding: 0;
@@ -28,15 +34,15 @@
     text-align: center;
     font-family: 'Bitstream Cyberbit';
     position: absolute;
-    top: 77%;
-    left: 6%;
+    top: 10%;
+    left: 60%;
   }
 
     /* Creates the gold buttons for the user options */
     .button1 {
   display: inline;
-  padding: 10px 20px;
-  font-size: 35px;
+  padding: 5px 5px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -46,9 +52,10 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  position: fixed;
-  bottom: 9px;
-  right: 160px;
+  position: absolute;
+  bottom: 200px;
+  right: 5px;
+  
 }
 
    /* Creates the hover effect for the button */
@@ -61,11 +68,11 @@
   transform: translateY(4px);
 }
 
-     /* Creates the gold buttons for the user options */
+
   .button2 {
   display: inline;
-  padding: 10px 20px;
-  font-size: 35px;
+  padding: 5px 5px;
+  font-size: 30px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -75,9 +82,9 @@
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
-  position: fixed;
-  bottom: 9px;
-  right: 900px;
+  position: absolute;
+  bottom: 200px;
+  right: 330px;
 }
 .button2:hover {background-color: #FFD700}
 
@@ -87,21 +94,24 @@
   transform: translateY(4px);
 }
 
-     /* Centers the text */
 .text-center {
    text-align: center;
    }
+
 </style>
 </head>
 <body style="background-color:IndianRed;">
+<img src = "camp-daytime.jpg" alt="camp" width="810" height="1080">
   <p id="textbox">After earning money, you continue to walk through the town. 
-      As you are walking you see wanted posters with your name and picture. 
-      At the bottom of the poster, you see the reward for your capture is high.
-       You tear the poster down. Do you want to find a disguise before continuing? 
+    As you are walking you see wanted posters with your name and picture. 
+    At the bottom of the poster, you see the reward for your capture is high.
+     You tear the poster down. Do you want to find a disguise before continuing? 
 </p>
+<aside>
 <div class="text-center">
 <a href="Scenario3.html" class="button1">Change into a disguise.</a>
 <a href="NumberGenForScenario2.html" class="button2">Don't change into a disguise.</a>
 </div>
+</aside>
 </body>
 </html>
