@@ -40,8 +40,23 @@
     left: 60%;
   }
 
-    /* Creates the gold buttons for the user options */
-    .button1 {
+   
+.text-center {
+   text-align: center;
+   }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .button1 {
   display: inline;
   padding: 5px 5px;
   font-size: 30px;
@@ -57,24 +72,19 @@
   position: absolute;
   bottom: 200px;
   right: 30px;
-
 }
 
+.container .button1:hover {
+  background-color: #FFD700
+}
 
-
-
-   /* Creates the hover effect for the button */
-    .button1:hover {background-color: #FFD700}
-
-   /*Creates the box shadow for the buttons */
-  .button1:active {
+.container .button1:active {
   background-color: #FFD700;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-
-  .button2 {
+.container .button2 {
   display: inline;
   padding: 5px 5px;
   font-size: 30px;
@@ -90,23 +100,22 @@
   position: absolute;
   bottom: 200px;
   right: 390px;
-}
-.button2:hover {background-color: #FFD700}
 
-.button2:active {
+}
+
+.container .button2:hover {
+  background-color: #FFD700
+}
+
+.container .button2:active {
   background-color: #FFD700;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
-
-.text-center {
-   text-align: center;
-   }
-
 </style>
 </head>
 <body style="background-color:IndianRed;">
-<img src = "/images/camp-daytime.jpg" alt="camp" width="810" height="1080">
+<img src = "camp-daytime.jpg" alt="camp" width="810" height="1080">
   <p id="textbox"> You have just escaped Julius Caesar’s prison but you don’t remember what happened that led you to be put in prison.
     You decide to move to a town where your uncle is the king.
     You arrive in a nearby kingdom and realize that you need money to either find a place to sleep or get food.What do you do?
@@ -123,11 +132,14 @@
     }
 // In the functions, you can put "location.href = 'wherever scenario 2 is';" to have it jump to the scenario 2 webpage
 </script>
-<div style="position:absolute; left:1400px;top:4px;width:100px;height:50px;border:1px solid #000;">0</div>
+<div style="position:absolute; left:1400px;top:4px;width:100px;height:50px;border:8px solid #000;">0</div>
 <aside>
 <div class="text-center">
+  <div class="container">
+    <img src="Scroll.jpg" alt="scroll" width="960" height="1280">
 <a onclick="rob()" class="button1">Rob someone for money.</a>
 <a onclick="beg()" class="button2">Beg for money.</a>
+</div>
 </div>
 </aside>
 </body>
