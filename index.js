@@ -1,3 +1,4 @@
+
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
     apiKey: "AIzaSyDqSvvfp4SSycrWWS5YPaTkk_RZiYd9ZmM",
@@ -8,4 +9,5 @@ const firebaseConfig = {
     messagingSenderId: "257537359537",
     appId: "1:257537359537:web:0257937760a7a0268f6c90",
     measurementId: "G-M8XW1WKDGT"
-  };
+};
+firebase.initializeApp(firebaseConfig);

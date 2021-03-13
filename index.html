@@ -7,14 +7,18 @@
         <script src="index.js"></script>
     </head>
     
-    <body>
+    <body style="background-color: indianred;">
         <!-------**HOME SCREEN HTML**------->
 
         <h1>*Game Name*</h1>
         <div>
-            <button>New Game</button>
-            <button>Load Game</button>
-            <button>Settings</button>
+            <button class="menu-btn">New Game</button>
+            <button class="menu-btn">Load Game</button>
+            <button class="menu-btn">Settings</button>
+        </div>
+        <div>
+            <p>*User must be logged in to access save data</p>
+            <button class="login-btn">Log In</button>
         </div>
 
         <!-----------**FIREBASE**----------->
@@ -41,6 +45,7 @@
             font-weight: bold;
             padding: 10px;
             text-align: center;
+            margin-top: 5%;
         }
         div {
             margin: auto;
@@ -48,11 +53,23 @@
             align-items: center;
             justify-content: center;
         }
-        div button {
-            font-size: 24px;
+        .menu-btn {
+            font-size: xx-large;
+            font-family: 'Courier New', Courier, monospace;
             margin-left: 5%;
             margin-right: 5%;
-            margin-top: 50%;
+            margin-top: 50%; /* Will need to be removed for image */
+        }
+        .login-btn {
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 3%;
+        }
+        p {
+            font-size: medium;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 5%;
+            margin-right: 3%;
         }
     </style>
 
