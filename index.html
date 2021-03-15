@@ -7,16 +7,16 @@
         <script src="index.js"></script>
     </head>
     
-    <body style="background-color: indianred;">
+    <body style="background-color: gray;">
         <!-------**HOME SCREEN HTML**------->
 
         <h1>*Game Name*</h1>
-        <div>
+        <div class="menu-container">
             <button class="menu-btn">New Game</button>
             <button class="menu-btn">Load Game</button>
             <button class="menu-btn">Settings</button>
         </div>
-        <div>
+        <div class="login-container">
             <p>*User must be logged in to access save data</p>
             <button class="login-btn">Log In</button>
         </div>
@@ -40,36 +40,62 @@
         h1 {
             margin: auto;
             height: 50%;
-            font-size: xx-large;
+            font-size: 2.5em;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             padding: 10px;
             text-align: center;
-            margin-top: 5%;
+            margin-top: 30px;
         }
-        div {
+        .menu-container {
             margin: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 95%;
+            position: absolute;
+            bottom: 110px;
         }
         .menu-btn {
-            font-size: xx-large;
+            padding: 15px 15px;
+            width: 100%;
+            margin-left: 5px;
+            font-size: xx-large; /* button size */
             font-family: 'Courier New', Courier, monospace;
-            margin-left: 5%;
-            margin-right: 5%;
-            margin-top: 50%; /* Will need to be removed for image */
+            font-weight: bold;
+            background-color: #a6976e;
+            color: black;
+            border-radius: 5px;
+            border: 5px solid #322917;
+        }
+        .login-container {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 95%;
+            position: absolute;
+            bottom: 40px;
         }
         .login-btn {
+            padding: 5px 10px;
             font-size: large;
             font-family: 'Courier New', Courier, monospace;
-            margin-top: 3%;
+            font-weight: bold;
+            background-color: #a6976e;
+            color: black;
+            border-radius: 5px;
+            border: 3px solid #322917;
         }
         p {
-            font-size: medium;
+            margin-right: 20px;
+            font-size: large;
             font-family: 'Courier New', Courier, monospace;
-            margin-top: 5%;
-            margin-right: 3%;
+            font-weight: bold;
+            background-color: #a6976e;
+            color: black;
+            border-radius: 1px;
+            border: 3px solid #322917;
         }
     </style>
 
