@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>scenario 2</title>
+</head>
+<style>
+
+    /* makes the image be at the left */
+    img {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    aside {
+            float: right;
+            margin-left: 20px;
+            width: 30%;
+            border: 60px Indianred;
+            padding: 10px;
+        }
+    /* Creates the story text */
+  #textbox {
+    border-radius: 25px;
+    background: #333333;
+    padding: 20px;
+    width: 600px;
+    height: 200px;
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Bitstream Cyberbit';
+    position: absolute;
+    top: 10%;
+    left: 60%;
+  }
+
+    /* Creates the gold buttons for the user options */
+    .button1 {
+  display: inline;
+  padding: 5px 5px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: absolute;
+  bottom: 200px;
+  right: 15px;
+
+}
+
+   /* Creates the hover effect for the button */
+    .button1:hover {background-color: #FFD700}
+
+   /*Creates the box shadow for the buttons */
+  .button1:active {
+  background-color: #FFD700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+  .button2 {
+  display: inline;
+  padding: 5px 5px;
+  font-size: 25px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #FFD700;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  position: absolute;
+  bottom: 200px;
+  right: 310px;
+}
+.button2:hover {background-color: #FFD700}
+
+.button2:active {
+  background-color: #FFD700;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.text-center {
+   text-align: center;
+   }
+
+</style>
+</head>
+<script src="script.js"></script>
+<body onLoad="goldtotal()" style="background-color:IndianRed;">
+<img src = "camp-daytime.jpg" alt="camp" width="810" height="1080">
+  <p id="textbox">After earning money, you continue to walk through the town.
+    As you are walking you see wanted posters with your name and picture.
+    At the bottom of the poster, you see the reward for your capture is high.
+     You tear the poster down. Do you want to find a disguise before continuing?
+</p>
+<div style="position:absolute; left:1400px;top:4px;width:100px;height:50px;border:1px solid #000;"></div>
+<aside>
+<div class="text-center">
+<a href="Scenario3.html" class="button1">Change into a disguise.</a>
+<a href="NumberGenForScenario2.html" class="button2">Don't change into a disguise.</a>
+</div>
+</aside>
+</body>
+</html>
