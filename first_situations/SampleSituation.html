@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Sample Scenario</title>
+    </head>
+
+    <body style="background-color:IndianRed;">
+        <!--Left Side-->
+        <img class="scene-img" src="camp-daytime.jpg">
+        <!--Right Side-->
+        <div>
+            <img src="Scroll3.png">
+            <p>You have just escaped Julius Caesar’s prison but you don’t remember what happened that led you to be put in prison.
+                You decide to move to a town where your uncle is the king.
+                You arrive in a nearby kingdom and realize that you need money to either find a place to sleep or get food.What do you do?</p>
+            <button class="btn-1">Rob someone for money</button>
+            <button class="btn-2">Beg for money</button>
+        </div>
+    </body>
+
+    <style>
+        .scene-img {
+            margin: auto;
+            height: 782px;
+            width: 49%;
+        }
+        div {
+            float: right;
+            margin: auto;
+            width: 50%;
+            height: 782px;
+            position: relative;
+            text-align: center;
+            
+        }
+        div img {
+            margin: auto;
+            width: 100%;
+            height: 100%;;
+            object-fit: fill;
+        }
+        div p {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: xx-large;
+        }
+        .btn-1 {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            padding: 10px 10px;
+        }
+        .btn-2 {
+            position: absolute;
+            top: 90%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 30px;
+            padding: 10px 10px;
+        }
+    </style>
+
+</html>
