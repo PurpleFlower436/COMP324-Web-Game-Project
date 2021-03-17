@@ -35,6 +35,7 @@ div p { /* May need to be overwritten in HTML for positioning */
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
+    background-color: #FFD900;
     padding: 10px 10px;
 }
 .btn-2 { /* May need to be overwritten in HTML for positioning */
@@ -43,6 +44,7 @@ div p { /* May need to be overwritten in HTML for positioning */
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
+    background-color: #FFD900;
     padding: 10px 10px;
 }
 .continue-btn {
