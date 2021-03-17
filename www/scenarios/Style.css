@@ -1,3 +1,7 @@
+
+body /*This is the background color for all of the pages! */
+{background-color: IndianRed;}
+
 .scene-img {
     margin: auto;
     height: 782px;
@@ -23,7 +27,7 @@ div p { /* May need to be overwritten in HTML for positioning */
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: xx-large;
+    font-size: 26px;
 }
 .btn-1 { /* May need to be overwritten in HTML for positioning */
     position: absolute;
