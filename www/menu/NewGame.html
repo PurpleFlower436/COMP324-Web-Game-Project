@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>New Game</title>
+    </head>
+
+    <body>
+        <div class="Background_Color_Top"></div>
+        <div class="Background_Color_Bottom"></div>
+        <div class="Heading"><h1>New Game</h1></div>
+        <div class="Save_Slot_Container">
+          <div class="Save_Slot"> <!--TODO add link to Save Game 1-->
+            <p1>File 1</p1>
+            <div class="Save_Game_Stats">
+            No Info Found!        <!--TODO palceholder-add messgae depending on data-->
+            </div>
+          </div>
+
+          <div class="Save_Slot"> <!--TODO add link to Save Game 2-->
+            <p1>File 2</p1>
+            <div class="Save_Game_Stats">
+              No Info Found!      <!--TODO palceholder-add messgae depending on data-->
+            </div>
+          </div>
+          
+          <div class="Save_Slot"> <!--TODO add link to Save Game 3-->
+            <p1>File 3</p1>
+            <div class="Save_Game_Stats">
+                No Info Found!    <!--TODO palceholder-add messgae depending on data-->
+            </div>
+          </div>
+
+        </div>
+
+    </body>
+
+    <style>
+      div.Save_Slot_Container {
+        display: grid;
+        grid-row-gap: 2em;
+        height: 17em;
+        width: 97vw; 
+        position: relative;
+        top:8em;
+      }
+
+      div.Save_Slot {
+        background-color: darkkhaki;
+        border: solid 3px rgb(158, 120, 23);
+        align-self: flex-start;
+        height: 4em;
+      }
+
+      div.Heading{
+        height:5em;
+        width:15em;
+        position: relative;
+        margin: 0 auto;
+        top: 1em;
+        border: 3px solid rgb(136, 0, 0);
+        text-align: center;
+        background-color: rgb(160, 105, 105);
+        font-size: 50;
+      }
+
+      div.Save_Game_Stats{
+        text-align: start;
+        position: absolute;    
+        border: 2px solid black;
+        height: 2.2em;
+        width: 15em;
+        right: 1em;    
+      }
+
+      div.Background_Color_Top{
+        position: fixed;
+        background-color: rgb(0, 110, 255); /*TODO -- possibly change color*/
+        width: 100vw;
+        height: 50vh;
+      }
+
+      div.Background_Color_Bottom{
+        position: fixed;
+        top: 50vh;
+        background-color: rgb(0, 255, 191);  /*TODO -- possibly change color*/
+        width: 100vw;
+        height: 50vh;
+      }
+
+      p1 {
+        position:relative;
+        left: 1em;
+        top: 1em;
+        color: darkred;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+                
+      }
+    </style>
+</html>
