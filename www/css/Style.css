@@ -3,7 +3,7 @@
     height: 782px;
     width: 49%;
 }
-div {
+.scroll-container {
     float: right;
     margin: auto;
     width: 50%;
@@ -12,25 +12,25 @@ div {
     text-align: center;
     
 }
-div img {
+.scroll-container img {
     margin: auto;
     width: 100%;
     height: 100%;;
     object-fit: fill;
 }
-div p { /* May need to be overwritten in HTML for positioning */
+.scroll-container p { /* May need to be overwritten in HTML for positioning */
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: xx-large;
+    font-size: 26px;
 }
 .btn-1 { /* May need to be overwritten in HTML for positioning */
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 26px;
     padding: 10px 10px;
     cursor: pointer;
     color: black;
@@ -42,10 +42,10 @@ div p { /* May need to be overwritten in HTML for positioning */
 }
 .btn-2 { /* May need to be overwritten in HTML for positioning */
     position: absolute;
-    top: 80%;
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 26px;
     padding: 10px 10px;
     cursor: pointer;
     color: black;
