@@ -7,14 +7,16 @@
         <script src="index.js"></script>
     </head>
     
-    <body style="background-color: gray;"> <!--background color needs to be changed-->
+    <body style="background-color: indianred;"> <!--background color needs to be changed-->
         <!-------**HOME SCREEN HTML**------->
-
         <h1>*Game Name*</h1>
+        <div class="home-screen">
+            
+            <img src="../images/HomeScreen.jpg">
+        </div>
         <div class="menu-container">
-            <a href="pages/Introduction.html"><button class="menu-btn">New Game</button></a> 
+            <a href="pages/Introduction.html" class="menu-btn">New Game</a> 
             <!--Currently routes to Introduction until login function is complete-->
-            <button class="menu-btn">New Game</button>
             <button class="menu-btn">Load Game</button>
             <button class="menu-btn">Settings</button>
         </div>
@@ -53,14 +55,24 @@
     </body>
 
     <style>
-        h1 {
+        .home-screen {
             margin: auto;
-            height: 50%;
+            position: relative;
+            text-align: center;
+        }
+        .home-screen img {
+            margin: auto;
+            width: 100%;
+            height: 782px;
+            object-fit: fill;
+        }
+        h1 {
+            position: absolute;
             font-size: 2.5em;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            padding: 10px;
             text-align: center;
+            padding: 10px;
             margin-top: 30px;
         }
         .menu-container {

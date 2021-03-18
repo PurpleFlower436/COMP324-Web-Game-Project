@@ -2,7 +2,7 @@
   "name": "COMP324-project",
   "version": "1.0.0",
   "description": "Choose Your Own Adventure Game",
-  "main": "/www/scenarios/Introduction.html",
+  "main": "/www/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

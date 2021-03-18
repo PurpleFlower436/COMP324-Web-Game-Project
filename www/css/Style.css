@@ -40,11 +40,6 @@ div p { /* May need to be overwritten in HTML for positioning */
 .btn-1:hover {
     background-color: #ffea73;
 }
-.btn-1:active {
-    background-color: #ffd700;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
 .btn-2 { /* May need to be overwritten in HTML for positioning */
     position: absolute;
     top: 80%;
@@ -60,11 +55,6 @@ div p { /* May need to be overwritten in HTML for positioning */
 .btn-2:hover {
     background-color: #ffea73;
 }
-.btn-2:active {
-    background-color: #ffd700;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
 .continue-btn {
     position: absolute;
     top: 70%;
@@ -79,9 +69,4 @@ div p { /* May need to be overwritten in HTML for positioning */
 }
 .continue-btn:hover {
     background-color: #ffea73;
-}
-.continue-btn:active {
-    background-color: #ffd700;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
 }
