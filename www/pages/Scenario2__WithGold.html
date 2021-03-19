@@ -4,11 +4,13 @@
         <link rel="stylesheet" href="../css/Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <script src="../js/script.js"></script>
         <title>scenario 2</title>
     </head>
 
     <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
+        <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
         <img class="scene-img" src="../../images/camp-daytime.jpg">
         <!--Right Side-->
         <div class="scroll-container">
@@ -21,7 +23,6 @@
                 <button class="btn-1">Change into a disguise.</button>
                 <button class="btn-2">Don't change into a disguise.</button>
             </a>
-            <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;">Gold: 0</div>
         </div>
 
                             <!-----------**FIREBASE**----------->
@@ -51,5 +52,5 @@
         firebase.analytics();
         </script>
     </body>
-    
+
 </html>
