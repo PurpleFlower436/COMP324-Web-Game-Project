@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/Style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <script src="../js/script.js"></script>
+        <title>scenario 5</title>
+    </head>
+
+    <body onLoad="goldtotal()" style="background-color: indianred;">
+        <!--Left Side-->
+        <img class="scene-img" src="camp-daytime.jpg">
+        <!--Right Side-->
+        <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
+        <div class="scroll-container">
+            <img src="../../images/Scroll3.png">
+            <p>It’s Day 1 of your journey. After traveling all day, you find the sun is starting to go down. 
+              You start to worry about finding a safe place to sleep but luckily you happen to find a spot. 
+              The bad thing is that there is a  group of Caesar’s guards. 
+              You can either move in closer and eavesdrop on their conversation or you can pack up your things and leave to find a different spot. 
+              What do you do? </p>
+            <a href="Scenario6_WithGold.html">
+            <button class="btn-1"> Decide to eavesdrop and listen in. </button>
+            <button class="btn-2">Sit at the site and wait it out.</button>
+        </div>
+
+        <!--
+        <style>
+            
+            div p {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+            }
+        </style>-->
+
+                            <!-----------**FIREBASE**----------->
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDqSvvfp4SSycrWWS5YPaTkk_RZiYd9ZmM",
+            authDomain: "comp-324-story-game.firebaseapp.com",
+            databaseURL: "https://comp-324-story-game-default-rtdb.firebaseio.com",
+            projectId: "comp-324-story-game",
+            storageBucket: "comp-324-story-game.appspot.com",
+            messagingSenderId: "257537359537",
+            appId: "1:257537359537:web:0257937760a7a0268f6c90",
+            measurementId: "G-M8XW1WKDGT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+
+    </body>
+</html>
