@@ -70,3 +70,8 @@
 .continue-btn:hover {
     background-color: #ffea73;
 }
+
+@font-face {
+    font-family:"Roman_SD";
+    src: url("Roman_SD.ttf") format("truetype");
+  }
