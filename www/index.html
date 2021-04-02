@@ -17,8 +17,8 @@
         <div class="menu-container">
             <a href="pages/Introduction.html" class="menu-btn" style="text-align: center;">New Game</a> 
             <!--Currently routes to Introduction until login function is complete-->
-            <button class="menu-btn">Load Game</button>
-            <button class="menu-btn">Settings</button>
+            <a href="menu/LoadGame.html" class="menu-btn" style="text-align: center;">Load Game</a>
+            <a href="menu/Settings.html" class="menu-btn" style="text-align: center;">Settings</a>
         </div>
         <div class="login-container">
             <p>*User must be logged in to access save data</p>
@@ -89,7 +89,6 @@
             width: 100%;
             margin-left: 5px;
             font-size: xx-large; /* button size */
-            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             background-color: #a6976e;
             color: black;
@@ -130,6 +129,11 @@
             color: black;
             border-radius: 1px;
             border: 3px solid #322917;
+        }
+
+        @font-face {
+            font-family:"Roman_SD";
+            src: url("Roman_SD.ttf") format("truetype");
         }
     </style>
 
