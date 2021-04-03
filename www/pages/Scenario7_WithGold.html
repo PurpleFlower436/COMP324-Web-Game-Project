@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/Style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <script src="../js/script.js"></script>
+        <title>scenario 7</title>
+    </head>
+    <style>
+    .scroll-container p {
+        font-size: 19px;
+    }
+    .btn-2 {
+        font-size: 18px;
+        left: 47%;
+    }
+    </style>
+    <body onLoad="goldtotal()" style="background-color: indianred;">
+        <!--Left Side-->
+        <img class="scene-img" src="camp-daytime.jpg">
+        <!--Right Side-->
+        <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
+        <div class="scroll-container">
+            <img src="Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b> It’s Day 3 of your journey. Before you start traveling on the horse, the Satyr tells you that he lost his sword. You ask them where they lost it and he says that it is in a cave that a Cyclops lives in. 
+                The Satyr takes you to the cave and tells you that his sword is inside. The two of you quietly go inside to take the sword from the sleeping cyclops but the Satyr accidentally loses his grip on the sword. 
+                The Cyclops angrily wakes up but the Satyr manages to grab his sword before the two of you exit. 
+                The two of you get back on the horse and try to leave but the Cyclops will not let you. What do you do? 
+            </b></p>
+            <button class="btn-1" style="font-family:'Roman_SD'">Fight the cyclops. </button>
+            <button class="btn-2" style="font-family:'Roman_SD'"> Ask the Satyr if they have anything to help. </button>
+        </div>
+
+        <!--
+        <style>
+            
+            div p {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+            }
+        </style>-->
+
+                            <!-----------**FIREBASE**----------->
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDqSvvfp4SSycrWWS5YPaTkk_RZiYd9ZmM",
+            authDomain: "comp-324-story-game.firebaseapp.com",
+            databaseURL: "https://comp-324-story-game-default-rtdb.firebaseio.com",
+            projectId: "comp-324-story-game",
+            storageBucket: "comp-324-story-game.appspot.com",
+            messagingSenderId: "257537359537",
+            appId: "1:257537359537:web:0257937760a7a0268f6c90",
+            measurementId: "G-M8XW1WKDGT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+
+    </body>
+</html>
