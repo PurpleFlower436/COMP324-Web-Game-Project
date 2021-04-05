@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../css/Style.css">
+        <link rel="stylesheet" href="Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <script src="../js/script.js"></script>
+        <script src="script.js"></script>
         <title>scenario 4</title>
     </head>
+    <style>
+    .scroll-container p {
+        font-size: 24px;
+        top: 45%;
+    }
+    .btn-1 {
+        top: 80%;
+    } 
+    .btn-2 {
+        top: 90%;
+}
+    </style>
 
     <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
-        <img class="scene-img" src="../../images/camp-daytime.jpg">
+        <img class="scene-img" src="camp-daytime.jpg">
         <!--Right Side-->
         <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
         <div class="scroll-container">
-            <img src="../../images/Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'">After you wake up the next morning, you ask the innkeeper where the stables are.
+            <img src="Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b>After you wake up the next morning, you ask the innkeeper where the stables are.
                  The innkeeper tells you that the stables are behind the inn. You walk out of the inn and walk towards the stables. 
                  You see 3 horses currently not being in use and ask the stable master what the price is for the horse.
-                  The stable master replies, “The price is [insert price amount]” What do you do?</p>
+                  The stable master replies, “The price is [insert price amount]” What do you do?</b></p>
             <button class="btn-1" style="font-family:'Roman_SD'">Buy the horse.</button>
             <button class="btn-2" style="font-family:'Roman_SD'">Steal the horse.</button>
         </div>
