@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="Style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <script src="script.js"></script>
+        <title>scenario 9b</title>
+    </head>
+
+    <body onLoad="goldtotal()" style="background-color: indianred;">
+        <!--Left Side-->
+        <img class="scene-img" src="camp-daytime.jpg">
+        <!--Right Side-->
+        <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
+        <div class="scroll-container">
+            <img src="Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b> You decide to take the long path and find a street vendor who sells food and various items.
+                 Click continue to talk to the vendor!
+            </b></p>
+            <button class="continue-btn" style="font-family:'Roman_SD'">Continue </button>
+
+        </div>
+
+
+                            <!-----------**FIREBASE**----------->
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDqSvvfp4SSycrWWS5YPaTkk_RZiYd9ZmM",
+            authDomain: "comp-324-story-game.firebaseapp.com",
+            databaseURL: "https://comp-324-story-game-default-rtdb.firebaseio.com",
+            projectId: "comp-324-story-game",
+            storageBucket: "comp-324-story-game.appspot.com",
+            messagingSenderId: "257537359537",
+            appId: "1:257537359537:web:0257937760a7a0268f6c90",
+            measurementId: "G-M8XW1WKDGT"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script>
+
+    </body>
+</html>
