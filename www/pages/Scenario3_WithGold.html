@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="../css/Style.css">
+        <link rel="stylesheet" href="Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <script src="../js/script.js"></script>
+        <script src="script.js"></script>
         <title>scenario 3</title>
     </head>
 
     <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
-        <img class="scene-img" src="../../images/camp-daytime.jpg">
+        <img class="scene-img" src="camp-daytime.jpg">
         <!--Right Side-->
         <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
+        <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        </div>
         <div class="scroll-container">
-            <img src="../../images/Scroll_Without_Background.png">
+            <img src="Scroll_Without_Background.png">
             <p style="font-family:'Roman_SD'"><b>As you approach the town square, wanted posters for your capture line the streets.
                 There's an inn you can escape to for the night and lie low, but the aroma of food from the market draws your attention
                 to your grumbling stomach. </b></p>
@@ -26,17 +38,17 @@
                     <!-----------**FIREBASE**----------->
 
         <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-                      
+
         <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-                      
+
         <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-                      
+
         <!-- Add Firebase products that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
-        
+
         <script>
             // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
             var firebaseConfig = {
@@ -54,5 +66,5 @@
         </script>
 
     </body>
-    
+
 </html>
