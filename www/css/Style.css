@@ -5,12 +5,13 @@
 }
 .scroll-container {
     float: right;
+    left: 10%;
     margin: auto;
     width: 50%;
     height: 782px;
     position: relative;
     text-align: center;
-    
+
 }
 .scroll-container img {
     margin: auto;
@@ -23,14 +24,18 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family:Roman;
     font-size: 26px;
 }
+
+
 .btn-1 { /* May need to be overwritten in HTML for positioning */
     position: absolute;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 26px;
+    font-family:Roman;
     padding: 10px 10px;
     cursor: pointer;
     color: black;
@@ -47,6 +52,7 @@
     transform: translate(-50%, -50%);
     font-size: 26px;
     padding: 10px 10px;
+    font-family:Roman;
     cursor: pointer;
     color: black;
     background-color: #ffd700;
@@ -57,7 +63,7 @@
 }
 .continue-btn {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 30px;
@@ -74,4 +80,22 @@
 @font-face {
     font-family:"Roman_SD";
     src: url("Roman_SD.ttf") format("truetype");
+  }
+
+  .grid-container {
+    position: absolute;
+    top: 1%;
+    left: 49.0%;
+    display: inline-grid;
+    grid-template-columns: 80px;
+    background-color: #000000;
+    padding: 5px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0);
+    padding: 20.5px;
+    font-size: 30px;
+    text-align: center;
   }
