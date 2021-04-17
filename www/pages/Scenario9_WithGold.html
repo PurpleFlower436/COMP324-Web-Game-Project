@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="../css/Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script src="script.js"></script>
         <title>scenario 9</title>
     </head>
-   
+    <style>
+        .scroll-container p {
+            font-size: 22px;
+        }
+        .btn-1 {
+        font-size: 19px;
+    }
+        .btn-2 {
+        font-size: 19px;
+    }
+        </style>
     <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
-        <img class="scene-img" src="camp-daytime.jpg">
+        <img class="scene-img" src="../../images/camp-daytime.jpg">
         <!--Right Side-->
         <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
         <div class="scroll-container">
-            <img src="Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'"><b> You decide to take the shorter path and find that a hydra lives there.
-                 What do you do?
-            </b></p>
-            <button class="btn-1" style="font-family:'Roman_SD'">Ask the companion for help. </button>
-            <button class="btn-2" style="font-family:'Roman_SD'"> Fight the hydra <br/> along with the companion. </button>
+            <img src="../../images/Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b> You walk along the shorter path, keeping an eye out for danger. After walking a short while, you come across a clearing that has a 
+                large lake as its centerpiece. You cautiously walk along the bank of the water, wary of what lurks beneath. As if to answer your fears, a hydra bursts out from the 
+                depths of the lake, refusing to let you pass through peacefully.</b></p>
+                <a href="Scenario10a_WithGold.html">
+            <button class="btn-1" style="font-family:'Roman_SD'"><b>Ask the companion for help</b> </button>
+            <button class="btn-2" style="font-family:'Roman_SD'"> <b>Fight the hydra <br/> along with the companion</b> </button>
+                </a>
         </div>
 
                     <!-----------**FIREBASE**----------->

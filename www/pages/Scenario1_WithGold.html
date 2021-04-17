@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="../css/Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script src="script.js"></script>
         <title>scenario 1</title>
     </head>
-    
+    <style>
+        .scroll-container p {
+
+            font-size: 22px;
+        }
+
+    </style>
     <body onLoad="session_start()" style="background-color: indianred;">
         <!--Left Side-->
-        <img class="scene-img" src="Rob_Or_Beg_Male.jpg">
+        <img class="scene-img" src="../../images/Rob_Or_Beg_Male.jpg">
         <!--Right Side-->
         <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
         <div class="scroll-container">
-            <img src="Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'">You arrive in the nearby kingdom and realize that you need money to either find a place to sleep or get food.
-                Along with acquiring money, you realize that people might notice you if you don't change clothes.
-                What do you do?</p>
+            <img src="../../images/Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b>You enter the nearby town, tired from running and losing stamina fast. You quickly realize that you need money to find a place to 
+                sleep as well as buy food. Alongside that, people may recognize you if you don't don a disguse. It's getting late and you need to act fast, but unfortunately
+                you don't have many options.</b></p>
             <a href="Scenario3_WithGold.html">
-                <button onclick="rob()" class="btn-1" style="font-family:'Roman_SD'">Rob someone for money  <br/> and steal clothes.</button>
-                <button onclick="beg()" class="btn-2" style="font-family:'Roman_SD'">Beg for money</button>
+                <button onclick="rob()" class="btn-1" style="font-family:'Roman_SD'"><b>Rob someone for money  <br/> and steal clothes</b></button>
+                <button onclick="beg()" class="btn-2" style="font-family:'Roman_SD'"><b>Beg for money</b></button>
             </a>
         </div>
 

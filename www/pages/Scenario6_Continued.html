@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-    
     <head>
+        <link rel="stylesheet" href="../css/Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/Style.css">
-        <title>Introduction</title>
+        <script src="script.js"></script>
+        <title>scenario 6</title>
     </head>
     <style>
         .scroll-container p {
 
-            font-size: 20px;
+            font-size: 22px;
         }
 
     </style>
-    <body style="background-color: indianred;">
+
+    <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
-        <img class="scene-img" src="../../images/Outside_Prison_Male.jpg">
+        <img class="scene-img" src="../../images/camp-daytime.jpg">
         <!--Right Side-->
+        <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
         <div class="scroll-container">
             <img src="../../images/Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'"><b>You escape Julius Caesar's prison in a daze, unsure of who you are nor why you were there. A pulsing sharp pain pounds through your
-                head, making it hard to even think. Maybe you suffered a bad head injury while imprisoned? Or maybe while you were escaping? You can't remember, but all you know
-                is that you need to get as far away from Caesar as possible. Through what seems like a miracle, a small memory still lives in your brain: an uncle of yours who lives
-                in a kingdom not too far from here. The perfect place to hide.</b></p>
-            <a href="Part1.html">
-                <button class="continue-btn" style="font-family:'Roman_SD'"><b>Continue</b></button>
-            </a>
+            <p style="font-family:'Roman_SD'"><b>Something about the satyr makes you feel as though you’ve seen them before, but you can’t quite place your finger on what it is.
+             The satyr’s snide remark causes the guards to harass them more. They could use some help but the guards’ presence makes it risky...
+                </b></p>
+           <a href="SatyrHasJoined.html"> <button class="btn-1" style="font-family:'Roman_SD'"> <b>Help them out</b> </button></a>
+          <a href="Scenario7_WithGold.html"> <button class="btn-2" style="font-family:'Roman_SD'"><b> Turn back to your horse <br/>and continue traveling</b></button></a>
         </div>
+
+        <!--
+        <style>
+            
+            div p {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+            }
+        </style>-->
 
                     <!-----------**FIREBASE**----------->
 
@@ -60,5 +72,4 @@
         </script>
 
     </body>
-
 </html>

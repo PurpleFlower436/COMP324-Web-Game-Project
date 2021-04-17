@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="../css/Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script src="script.js"></script>
         <title>scenario 8</title>
     </head>
-
+    <style>
+        .scroll-container p {
+            font-size: 22px;
+        }
+        </style>
     <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
-        <img class="scene-img" src="camp-daytime.jpg">
+        <img class="scene-img" src="../../images/camp-daytime.jpg">
         <!--Right Side-->
         <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
         <div class="scroll-container">
-            <img src="Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'"><b> It’s Day 4 of your journey. After a couple of hours, you come across two paths.
-                 One path will extend your journey to your uncles kingdom by two days but the other will get you there faster.
-                  The only downside is that the other path is dangerous. What do you do?
+            <img src="../../images/Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b> Thankful for defeating the cyclops, you continue the 4th day of your journey. No guards, cyvlops, or other monstrous enemies disrupt
+                your journey on this day. After a few hours have passed, you come across two paths that will effect your journey. One path will extend the journey
+                 to your uncle's kingdom by two days while the other path will get you there faster, yet it's highly dangerous.
             </b></p>
-            <a href="Scenario9_WithGold.html"> <button class="btn-1" style="font-family:'Roman_SD'">Shorter path. </button>
-            <a href="Scenario9b_WithGold.html"> <button class="btn-2" style="font-family:'Roman_SD'"> Longer path. </button>
+            <a href="Scenario9_WithGold.html"> <button class="btn-1" style="font-family:'Roman_SD'"><b>Take the shorter path</b> </button></a>
+            <a href="Scenario9b_WithGold.html"> <button class="btn-2" style="font-family:'Roman_SD'"> <b>Take the longer path </b></button></a>
         </div>
 
                     <!-----------**FIREBASE**----------->
