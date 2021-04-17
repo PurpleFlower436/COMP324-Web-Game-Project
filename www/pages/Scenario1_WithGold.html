@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../css/Style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
-        <script src="script.js"></script>
+        <script src="../js/script.js"></script>
         <title>scenario 1</title>
     </head>
     <style>
@@ -19,13 +19,25 @@
         <img class="scene-img" src="../../images/Rob_Or_Beg_Male.jpg">
         <!--Right Side-->
         <div class="gold-box" style="position:absolute; left:10%; top:6.5%; width:100px; height:50px; border:3px solid #000; font-weight:bold;"></div>
+        <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item">10</div>
+        </div>
         <div class="scroll-container">
-            <img src="../../images/Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'"><b>You enter the nearby town, tired from running and losing stamina fast. You quickly realize that you need money to find a place to 
+            <img src="Scroll_Without_Background.png">
+            <p style="font-family:'Roman_SD'"><b>You enter the nearby town, tired from running and losing stamina fast. You quickly realize that you need money to find a place to
                 sleep as well as buy food. Alongside that, people may recognize you if you don't don a disguse. It's getting late and you need to act fast, but unfortunately
                 you don't have many options.</b></p>
             <a href="Scenario3_WithGold.html">
-                <button onclick="rob()" class="btn-1" style="font-family:'Roman_SD'"><b>Rob someone for money  <br/> and steal clothes</b></button>
+                <button onclick="rob()" class="btn-1" style="font-family:'Roman_SD'"><b>Rob someone for money  <br/> and steal their clothes</b></button>
                 <button onclick="beg()" class="btn-2" style="font-family:'Roman_SD'"><b>Beg for money</b></button>
             </a>
         </div>
@@ -33,17 +45,17 @@
                     <!-----------**FIREBASE**----------->
 
         <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-                      
+
         <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
-                      
+
         <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
-                      
+
         <!-- Add Firebase products that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
-        
+
         <script>
             // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
             var firebaseConfig = {
