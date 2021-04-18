@@ -1,7 +1,14 @@
-var myAudio = document.getElementById("myAudio");
+
 
 function togglePlay() {
-  return myAudio.paused ? myAudio.play() : myAudio.pause();}
+  var myAudio = document.getElementById("myAudio");
+  return myAudio.paused ? myAudio.play() : myAudio.pause();
+
+   //then add 
+   //<audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+   //</audio>
+   //<a onClick="togglePlay()">Click here to hear.</a>
+   }
 function session_start() {
     sessionStorage.setItem("gold","Gold:0");
     sessionStorage.setItem("hydra_health",100);
