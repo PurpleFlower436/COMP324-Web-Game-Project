@@ -7,19 +7,35 @@
         <script src="/www/index.js"></script>
     </head>
 
-    <body onLoad="initFirebase()" style="background-color: gray;"> <!--background color needs to be changed-->
-        <form>
-            <h1>Log In or Sign Up</h1>
-            <!--Email pattern: text@text.domain (domain is at least 2 characters)-->
-            <input id="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Email" required>
-            <br>
-            <!--Password must contain at least 1 number/1 lowercase/1 uppercase, at least 6 characters-->
-            <input id="Password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="Password" required>
-            <br>
-            <button id="Login-Btn" type="submit" onclick="login()">Log In</button>
-            <br>
-            <button id="Signup-Btn" type="submit" onclick="signUp()">Sign Up</button>
-        </form>
+    <body onLoad="initApp()" style="background-color: gray;"> <!--background color needs to be changed-->
+        <div>
+
+            <div>
+                <h1 class="top-heading">Log in to an existing account</h1>
+                <br>
+                <h2>- or -</h2>
+                <br>
+                <h1 class="btm-heading">Sign up to create a new account</h1>
+                <!--Email pattern: text@text.domain (domain is at least 2 characters)-->
+                <!--pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"-->
+                <input id="email" type="text" name="email" placeholder="Email">
+                <br>
+                <!--Password must contain at least 1 number/1 lowercase/1 uppercase, at least 6 characters-->
+                <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"-->
+                <input id="password" type="password" name="password" placeholder="Password">
+                <br><br><br><br><br>
+                <button disabled class="btn-top" id="login-btn" type="submit" name="login">Log In</button>
+                <br>
+                <button onclick="check()" id="signup-btn" type="submit" name="signup">Sign Up</button>
+                </div>
+            
+            <div class="auth-stats">
+                Sign-in status: <span id="login-status">Unknown</span>
+                <div>Firebase auth <code>currentUser</code> object value:</div>
+                <pre><code id="account-details">null</code></pre>
+            </div>
+
+        </div>
 
                     <!-----------**FIREBASE**----------->
 
@@ -54,31 +70,44 @@
     </body>
 
     <style>
-        form {
+        div {
             width: 100%;
             margin: auto;
             text-align: center;
         }
+        .auth-stats {
+            margin-top: 30px;
+        }
         h1 {
             display: block;
-            margin: auto;
             font-size: xx-large;
             font-weight: bold;
             text-align: center;
             font-family: 'Courier New', Courier, monospace;
-            margin-top: 5px;
+            margin: auto;
+        }
+        .top-heading {
+            margin-top: 50px;
+        }
+        .btm-heading {
+            margin-bottom: 70px;
+        }
+        h2 {
+            display: block;
+            font-size: xx-large;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: auto;
         }
         input {
             width: 70%;
             height: 40%;
             padding: 12px 20px;
-            margin-top: 10%;
+            margin-top: 30px;
             box-sizing: border-box;
             border: 2px solid #322917;
             font-size: large;
-        }
-        #Password {
-            margin-bottom: 10%;
         }
         button {
             display: block;
@@ -95,6 +124,9 @@
         }
         button:hover {
             background-color: #a79c7f;
+        }
+        .btn-top {
+            margin-top: 40px;
         }
     </style>
     
