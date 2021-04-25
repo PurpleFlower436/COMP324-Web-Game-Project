@@ -21,8 +21,10 @@ function attack_hydra() {
 function attack_cyclops() {
         let health = document.getElementById("health_cyclops")
         health.value -= 60;
+	if (health.value <= 0){
+	window.location.href = "CyclopsDefeated.html";}
         let health1 = document.getElementById("health_player")
-        health1.value -= 30;
+        health1.value -= 15;
         }
 function heal() {
      var a = sessionStorage.getItem("player_health");
