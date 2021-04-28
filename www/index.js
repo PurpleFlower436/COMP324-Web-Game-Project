@@ -1,27 +1,3 @@
-// Firebase App (the core Firebase SDK) is always required and must be listed first
-import firebase from "firebase/app";
-// Add the Firebase products that you want to use
-import "firebase/auth";
-import "firebase/database";
-
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyDqSvvfp4SSycrWWS5YPaTkk_RZiYd9ZmM",
-    authDomain: "comp-324-story-game.firebaseapp.com",
-    databaseURL: "https://comp-324-story-game-default-rtdb.firebaseio.com",
-    projectId: "comp-324-story-game",
-    storageBucket: "comp-324-story-game.appspot.com",
-    messagingSenderId: "257537359537",
-    appId: "1:257537359537:web:0257937760a7a0268f6c90",
-    measurementId: "G-M8XW1WKDGT"
-};
-firebase.initializeApp(firebaseConfig);
-
-function check() {
-    alert("Function call successful");
-    document.write(<p>success</p>);
-}
 
 function login() {
     if (firebase.auth().currentUser) {
@@ -49,10 +25,16 @@ function login() {
                 alert(errorMessage);
             }
             console.log(error);
-            document.getElementById('Login-Btn').disabled = false;
+        });
+        document.getElementById('email').value = "";
+        document.getElementById('password').value = "";
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) { //if the user successfully logs in
+                location.href = "../index.html";
+                alert("You are logged in!");
+            }
         });
     }
-    document.getElementById('Login-Btn').disabled = true;
 }
 
 function signUp() {
@@ -79,91 +61,35 @@ function signUp() {
         }
         console.log(error);
     });
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            location.href = "../index.html";
+            alert("Account created!");
+        }
+    });
+    document.getElementById('email').value = "";
+    document.getElementById('password').value = "";
 }
 
 function initApp() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) { // If user is signed in
-            var email = user.email;
-            var isAnonymous = user.isAnonymous;
             var uid = user.uid;
-            var providerData = user.providerData;
-            // .displayName, .photoURL, .emailVerified
-            document.getElementById('login-status').textContent = "Signed in";
-            document.getElementById('login-btn').textContent = 'Sign out';
-            document.getElementById('account-details').textContent = JSON.stringify(user,null,'  ');
+            sessionStorage["uid"] = uid; //saves user to session storage upon login
+            //document.getElementById('login-status').textContent = "Signed in";
+            document.getElementById('login-btn').textContent = 'Log out';
+            document.getElementById('signup-btn').hidden = true;
+            //document.getElementById('account-details').textContent = JSON.stringify(user,null,'  ');
         } else { // If user is signed out
-            document.getElementById('login-status').textContent = 'Signed out';
-            document.getElementById('login-btn').textContent = 'Sign in';
-            document.getElementById('account-details').textContent = 'null';
+            //document.getElementById('login-status').textContent = 'Signed out';
+            document.getElementById('login-btn').textContent = 'Log in';
+            //document.getElementById('account-details').textContent = 'null';
         }
-        document.getElementById('login-btn').disabled = false;
+        if (!user) {
+            sessionStorage.removeItem("uid");
+        }
     });
-    // Listeners
+    // Listeners for login and sign up buttons
     document.getElementById('login-btn').addEventListener('click', login, false);
     document.getElementById('signup-btn').addEventListener('click', signUp, false);
 }
-
-/*
-function login() {
-    var email = document.getElementById("Email").value;
-    var password = document.getElementById("Password").value;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((userCredetial) => {
-          var user = userCredetial.user;
-          // ...
-    })
-    .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        console.log("The following error has occured: "+errorCode+" / "+ errorMessage);
-    });
-}
-*/
-
-/*
-function signUp() {
-    const email = document.getElementById("Email").value;
-    const password = document.getElementById("Password").value;
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then((userCredential) => {
-          var user = userCredential.user;
-          // ...
-    })
-    .catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-        console.log("The following error has occured: "+errorCode+" / "+ errorMessage);
-    });
-}
-*/
-
-/*
-function logoutBtnClick() {
-    firebase.auth().signOut().then(() => {
-        console.log("Logout Successful");
-    }).catch((error) => {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.log("The following error has occured: "+errorCode+" / "+ errorMessage);
-    });
-}
-*/
-
-/*
-function authStateListener() {
-    firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            // User is signed in, see docs for a list of available properties
-            // https://firebase.google.com/docs/reference/js/firebase.User
-            var uid = user.uid;
-            // ...
-        } else {
-            // User is signed out
-            // ...
-        }
-    });
-}
-*/

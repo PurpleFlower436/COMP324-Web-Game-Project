@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Login</title>
-        <script src="/www/index.js"></script>
+        <script src="../index.js"></script>
     </head>
 
     <body onLoad="initApp()" style="background-color: gray;"> <!--background color needs to be changed-->
@@ -24,17 +24,18 @@
                 <!--pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"-->
                 <input id="password" type="password" name="password" placeholder="Password">
                 <br><br><br><br><br>
-                <button disabled class="btn-top" id="login-btn" type="submit" name="login">Log In</button>
+                <button class="btn-top" id="login-btn" name="login">Log In</button>
                 <br>
-                <button onclick="check()" id="signup-btn" type="submit" name="signup">Sign Up</button>
-                </div>
+                <button id="signup-btn" name="signup">Sign Up</button>
+            </div>
             
+                <!--Used for testing purposes
             <div class="auth-stats">
                 Sign-in status: <span id="login-status">Unknown</span>
                 <div>Firebase auth <code>currentUser</code> object value:</div>
                 <pre><code id="account-details">null</code></pre>
             </div>
-
+            -->
         </div>
 
                     <!-----------**FIREBASE**----------->
