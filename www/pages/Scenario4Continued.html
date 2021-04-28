@@ -5,8 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <script src="../js/script.js"></script>
-        <title>cyclops defeated</title>
+        <title>scenario 4</title>
     </head>
+    <style>
+    .scroll-container p {
+        font-size: 24px;
+        top: 45%;
+    }
+    .btn-1 {
+        top: 80%;
+    }
+    .btn-2 {
+        top: 90%;
+}
+    </style>
 
     <body onLoad="goldtotal()" style="background-color: indianred;">
         <!--Left Side-->
@@ -27,12 +39,26 @@
         </div>
         <div class="scroll-container">
             <img src="../../images/Scroll_Without_Background.png">
-            <p style="font-family:'Roman_SD'"><b> Congratulations! The Cyclops has been defeated! You can move on!
-            </b></p>
-            <a href="Scenario8.html">
-                <button class="continue-btn" style="font-family:'Roman_SD'"><b>Continue</b> </button>
-            </a>
+            <p style="font-family:'Roman_SD'"><b> Walking into the stables, only 3 horses fill the stalls. Searching around, you eventually
+                spot the stable master and ask him the price for a horse. "A horse costs 20 gold." It's quite expensive and
+            will definitely cause a major dent in your funds.</b></p>
+        <a href="Scenario5.html">
+            <button class="btn-1" style="font-family:'Roman_SD'"><b>Buy the horse</b></button>
+            <button class="btn-2" style="font-family:'Roman_SD'"><b>Steal the horse</b></button>
+        </a>
         </div>
+
+        <!--
+        <style>
+
+            div p {
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+            }
+        </style>-->
 
                     <!-----------**FIREBASE**----------->
 
@@ -66,4 +92,3 @@
 
     </body>
 </html>
-
