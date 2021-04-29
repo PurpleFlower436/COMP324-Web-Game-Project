@@ -26,6 +26,7 @@ function initData() {
             });
                 document.getElementById('error-message').style.visibility = "hidden";
                 console.log(this.berries, this.bread, this.characterName, this.characterSex, this.gold, this.lastSave, this.points, this.porkchop);
+                console.log(user.uid);
         } else {
             console.log("Error: No data found. No user is signed in");
             document.getElementById('error-message').textContent = "Warning: User is not signed in, data cannot be saved.";
@@ -81,6 +82,7 @@ function popupNo() {
 }
 
 // Save Data when a New Game is Created
+/*
 function newGame() {
     var charName = document.getElementById('char-name').value;
     var charSex;
@@ -93,6 +95,7 @@ function newGame() {
     this.characterSex = charSex;
     this.lastSave = "/pages/Introduction.html";
 }
+*/
 
 // Sets the savePoint as the HTML page the user was on when quitting
 function setSavePoint(currentPage) {
