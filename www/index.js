@@ -51,21 +51,20 @@ function signUp() {
     }
     // Firebase func to create a new user
     firebase.auth().createUserWithEmailAndPassword(email,password)
-    .then(function success(userCreds) {
-        firebase.database().ref().child('users').push(userCreds.user.uid).set({
-            characterName: "",
-            characterSex: "",
-            lastSave: "",
+    .then(function(userCreds) {
+        alert("Account created! Please log in.");
+        console.log(userCreds.user.uid);
+        firebase.database().ref().child("users/"+userCreds.user.uid).set({
+            characterName: "default",
+            characterSex: "default",
+            lastSave: "default",
             points: 0,
             gold: 0,
             porkchop: 0,
             bread: 0,
-            berries: 0,
-            sword: 0
+            berries: 0
         });
-        console.log(userCreds.user.uid);
         location.href = "../index.html";
-        alert("Account created!");
     })
     .catch(function(error) {
         // Error handling
@@ -78,6 +77,7 @@ function signUp() {
         }
         console.log(error);
     });
+
     document.getElementById('email').value = "";
     document.getElementById('password').value = "";
 }
