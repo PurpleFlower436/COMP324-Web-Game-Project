@@ -52,10 +52,18 @@ function signUp() {
     // Firebase func to create a new user
     firebase.auth().createUserWithEmailAndPassword(email,password)
     .then(function success(userCreds) {
-        firebase.database().ref().child('users').push();
-        // LEFT OFF HERE !!!!!!!!!!
-        console.log(userCreds.user.uid);
-        //location.href = "../index.html";
+        firebase.database().ref().child('users').push(userCreds.user.uid).set({
+            characterName: "",
+            characterSex: "",
+            lastSave: "",
+            points: 0,
+            gold: 0,
+            porkchop: 0,
+            bread: 0,
+            berries: 0,
+            sword: 0
+        });
+        location.href = "../index.html";
         alert("Account created!");
     })
     .catch(function(error) {
@@ -79,13 +87,13 @@ function initApp() {
             var uid = user.uid;
             sessionStorage["uid"] = uid; //saves user to session storage upon login
             //document.getElementById('login-status').textContent = "Signed in";
-            document.getElementById('login-btn').textContent = 'Log out';
+            document.getElementById('login-btn').textContent = 'Log Out';
             document.getElementById('signup-btn').hidden = true;
             //document.getElementById('account-details').textContent = JSON.stringify(user,null,'  ');
         } else { // If user is signed out
             sessionStorage.removeItem("uid");
             //document.getElementById('login-status').textContent = 'Signed out';
-            document.getElementById('login-btn').textContent = 'Log in';
+            document.getElementById('login-btn').textContent = 'Log In';
             //document.getElementById('account-details').textContent = 'null';
         }
     });

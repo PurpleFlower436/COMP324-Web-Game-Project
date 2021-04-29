@@ -5,23 +5,27 @@
         <meta charset="UTF-8">
         <title>Home Screen</title>
         <script src="index.js"></script>
+        <script src="js/user.service.js"></script>
     </head>
     
-    <body style="background-color: indianred;"> <!--background color needs to be changed-->
+    <body onLoad="initData()" style="background-color: indianred;"> <!--background color needs to be changed-->
         <!-------**HOME SCREEN HTML**------->
         <h1>*Game Name*</h1>
         <div class="home-screen">
             <img src="../images/HomeScreen.jpg">
         </div>
         <div class="menu-container">
-            <a href="pages/Introduction.html" class="menu-btn" style="text-align: center;">New Game</a> 
+            <a href="pages/NewGame.html" id="new-game" class="menu-btn" style="text-align: center;">New Game</a> 
             <!--Currently routes to Introduction until login function is complete-->
-            <a href="menu/LoadGame.html" class="menu-btn" style="text-align: center;">Load Game</a>
+            <a href="menu/LoadGame.html" id="load-game" class="menu-btn" style="text-align: center;">Load Game</a>
             <a href="menu/Settings.html" class="menu-btn" style="text-align: center;">Settings</a>
         </div>
         <div class="login-container">
             <p>*User must be logged in to access save data</p>
             <a href="menu/Login.html" class="login-btn" style="text-align: center;">Log In</a>
+        </div>
+        <div class="error-message-container">
+            <p id="error-message"></p>
         </div>
 
                     <!-----------**FIREBASE**----------->
@@ -37,7 +41,8 @@
         <!-- Add Firebase products that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
-        
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
         <script>
             // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
             var firebaseConfig = {
