@@ -1,4 +1,6 @@
 
+
+
 /* Music */
 function togglePlay() {
   var myAudio = document.getElementById("myAudio");
@@ -14,9 +16,6 @@ function session_start() {
     sessionStorage.setItem("gold","Gold:0");
     document.getElementsByTagName('div')[0].innerHTML = sessionStorage.getItem("gold");
 }
-
-/* Session Storage for a User */
-
 
 /* Combat Functions */
 function attack_hydra() {

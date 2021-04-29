@@ -50,7 +50,15 @@ function signUp() {
         return;
     }
     // Firebase func to create a new user
-    firebase.auth().createUserWithEmailAndPassword(email,password).catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(email,password)
+    .then(function success(userCreds) {
+        firebase.database().ref().child('users').push();
+        // LEFT OFF HERE !!!!!!!!!!
+        console.log(userCreds.user.uid);
+        //location.href = "../index.html";
+        alert("Account created!");
+    })
+    .catch(function(error) {
         // Error handling
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -60,12 +68,6 @@ function signUp() {
             alert(errorMessage);
         }
         console.log(error);
-    });
-    firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            location.href = "../index.html";
-            alert("Account created!");
-        }
     });
     document.getElementById('email').value = "";
     document.getElementById('password').value = "";
@@ -81,12 +83,10 @@ function initApp() {
             document.getElementById('signup-btn').hidden = true;
             //document.getElementById('account-details').textContent = JSON.stringify(user,null,'  ');
         } else { // If user is signed out
+            sessionStorage.removeItem("uid");
             //document.getElementById('login-status').textContent = 'Signed out';
             document.getElementById('login-btn').textContent = 'Log in';
             //document.getElementById('account-details').textContent = 'null';
-        }
-        if (!user) {
-            sessionStorage.removeItem("uid");
         }
     });
     // Listeners for login and sign up buttons
