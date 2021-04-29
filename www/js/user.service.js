@@ -1,4 +1,5 @@
 /* Save database information for a user */
+
 var berries;
 var bread;
 var characterName;
@@ -11,7 +12,10 @@ var sword;
 
 // Gets user data when a game is loaded
 function initData() {
-    if (firebase.auth().currentUser) {
+    firebase.auth().onAuthStateChanged(function(user) {
+
+    
+    if (user) {
             var dataRef = firebase.database().ref("users/"+user.uid);
             dataRef.once("value").then(function(snapshot) {
                 this.berries = snapshot.child("berries").val();
@@ -31,6 +35,7 @@ function initData() {
             document.getElementById('error-message').textContent = "Warning: User is not signed in, data cannot be saved.";
             document.getElementById('error-message').style.visibility = "visible";
         }
+    });
     // Event Listeners for Home Screen buttons
     document.getElementById('load-game').addEventListener('click', loadGame, false);
     document.getElementById('new-game').addEventListener('click', checkSave, false);

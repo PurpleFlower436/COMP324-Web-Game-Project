@@ -63,6 +63,7 @@ function signUp() {
             berries: 0,
             sword: 0
         });
+        console.log(userCreds.user.uid);
         location.href = "../index.html";
         alert("Account created!");
     })
