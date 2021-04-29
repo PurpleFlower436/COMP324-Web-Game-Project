@@ -1,5 +1,4 @@
-/* Get database information for a user */
-var user = firebase.auth().currentUser;
+/* Save database information for a user */
 var berries;
 var bread;
 var characterName;
@@ -12,59 +11,93 @@ var sword;
 
 // Gets user data when a game is loaded
 function initData() {
-    if (currentUser != null) {
-        var dataRef = firebase.auth().ref("users/"+currentUser.uid);
-        dataRef.once("value").then(function(snapshot) {
-            berries = snapshot.child("berries").val();
-            bread = snapshot.child("bread").val();
-            characterName = snapshot.child("characterName").val();
-            characterSex = snapshot.child("characterSex").val();
-            gold = snapshot.child("gold").val();
-            lastSave = snapshot.child("lastSave").val();
-            points = snapshot.child("points").val();
-            porkchop = snapshot.child("porkchop").val();
-            sword = snapshot.child("sword").val();
-        });
-    } else {
-        console.log("Error: No data found. No user is signed in");
-
-    }
+    if (firebase.auth().currentUser) {
+            var dataRef = firebase.database().ref("users/"+user.uid);
+            dataRef.once("value").then(function(snapshot) {
+                this.berries = snapshot.child("berries").val();
+                this.bread = snapshot.child("bread").val();
+                this.characterName = snapshot.child("characterName").val();
+                this.characterSex = snapshot.child("characterSex").val();
+                this.gold = snapshot.child("gold").val();
+                this.lastSave = snapshot.child("lastSave").val();
+                this.points = snapshot.child("points").val();
+                this.porkchop = snapshot.child("porkchop").val();
+                this.sword = snapshot.child("sword").val();
+            });
+            document.getElementById('error-message').style.visibility = "hidden";
+            console.log(this.berries, this.bread, this.characterName, this.characterSex, this.gold, this.lastSave, this.points, this.porkchop, this.sword);
+        } else {
+            console.log("Error: No data found. No user is signed in");
+            document.getElementById('error-message').textContent = "Warning: User is not signed in, data cannot be saved.";
+            document.getElementById('error-message').style.visibility = "visible";
+        }
     // Event Listeners for Home Screen buttons
     document.getElementById('load-game').addEventListener('click', loadGame, false);
     document.getElementById('new-game').addEventListener('click', checkSave, false);
+    document.getElementById('popup-yes').addEventListener('click', popupYes, false);
+    document.getElementById('popup-no').addEventListener('click', popupNo, false);
+}
+
+function resetUserData() {
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            firebase.database().ref("users/"+user.uid).set({
+                characterName: "",
+                characterSex: "",
+                lastSave: "",
+                points: 0,
+                gold: 0,
+                porkchop: 0,
+                bread: 0,
+                berries: 0,
+                sword: 0
+            });
+        }
+    });
 }
 
 function loadGame() {
     if (this.characterName === "") {
         document.getElementById('error-message').textContent = "Error: no save data found. Ensure you are logged in";
     } else {
-        
+        location.href = "../pages/" + this.lastSave;
     }
 }
 
 function checkSave() {
-
-}
-
-
-/* Returns user's ID# */
-function getUserId() {
-    return this.uid;
-}
-
-/* Saves new games */
-function newGame() {
-    if (this.uid != null) {
-        var ref = firebase.database.ref('users/'+this.uid);
-        
+    if (this.lastSave === "") {
+        location.href = "../menu/NewGame.html";
+    } else {
+        document.getElementById('popup-text').style.visibility = "visible";
     }
 }
+function popupYes() {
+    resetUserData();
+    location.href = "../menu/NewGame.html";
+}
+function popupNo() {
+    document.getElementById('popup-text').style.visibility = "hidden";
+}
 
-/* Sets the savePoint as the HTML page the user was on when quitting */
+/* Save Data when a New Game is Created */
+function newGame() {
+    var charName = document.getElementById('char-name').value;
+    var charSex;
+    firebase.database().ref('users/'+currentUser.user.uid).set({
+        characterName: charName,
+        //characterSex: ,
+        lastSave: "../pages/Introduction.html"
+    });
+    this.characterName = charName;
+    this.characterSex = charSex;
+    this.lastSave = "../pages/Introduction.html";
+}
+
+/* Sets the savePoint as the HTML page the user was on when quitting
 function setSavePoint(currentPage) {
     if (this.uid != null) {
         firebase.database().ref('users/' + this.uid).set({
             savePoint: currentPage
         });
     }
-}
+}*/

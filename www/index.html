@@ -8,25 +8,35 @@
         <script src="js/user.service.js"></script>
     </head>
     
-    <body onLoad="initData()" style="background-color: indianred;"> <!--background color needs to be changed-->
+    <body style="background-color: indianred;"> <!--background color needs to be changed-->
         <!-------**HOME SCREEN HTML**------->
         <h1>*Game Name*</h1>
+        <h3 id="error-message"></h3>
+
         <div class="home-screen">
             <img src="../images/HomeScreen.jpg">
         </div>
+
         <div class="menu-container">
-            <a href="pages/NewGame.html" id="new-game" class="menu-btn" style="text-align: center;">New Game</a> 
-            <!--Currently routes to Introduction until login function is complete-->
-            <a href="menu/LoadGame.html" id="load-game" class="menu-btn" style="text-align: center;">Load Game</a>
+            <div class="popup">
+                <span class="popup-text" id="popup-text">An existing save file was found. Are you sure you want to overwrite this data?
+                <button class="popup-btn" id="popup-yes">Yes</button>
+                <button class="popup-btn" id="popup-no">No</button>
+            </span>
+            </div>
+            <!--Routing done in JavaScript-->
+            <button id="new-game" class="menu-btn" style="text-align: center;">New Game</button> 
+            <!--Routing done in JavaScript-->
+            <button id="load-game" class="menu-btn" style="text-align: center;">Load Game</button>
             <a href="menu/Settings.html" class="menu-btn" style="text-align: center;">Settings</a>
         </div>
+
         <div class="login-container">
             <p>*User must be logged in to access save data</p>
             <a href="menu/Login.html" class="login-btn" style="text-align: center;">Log In</a>
         </div>
-        <div class="error-message-container">
-            <p id="error-message"></p>
-        </div>
+
+        
 
                     <!-----------**FIREBASE**----------->
 
@@ -70,17 +80,34 @@
         .home-screen img {
             margin: auto;
             width: 100%;
-            height: 782px;
+            height: 700px;
             object-fit: fill;
         }
         h1 {
             position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             font-size: 2.5em;
-            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             text-align: center;
             padding: 10px;
             margin-top: 30px;
+            z-index: 1;
+        }
+        h3 {
+            visibility: hidden;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5em;
+            text-align: center;
+            padding: 10px;
+            z-index: 1;
+            border-radius: 5px;
+            border: 5px solid black;
+            background-color: indianred;
         }
         .menu-container {
             margin: auto;
@@ -94,7 +121,7 @@
         .menu-btn {
             padding: 15px 15px;
             width: 100%;
-            margin-left: 5px;
+            margin-left: 60px;
             font-size: xx-large; /* button size */
             font-weight: bold;
             background-color: #a6976e;
@@ -117,7 +144,6 @@
         .login-btn {
             padding: 5px 10px;
             font-size: large;
-            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             background-color: #a6976e;
             color: black;
@@ -130,12 +156,48 @@
         p {
             margin-right: 20px;
             font-size: large;
-            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             background-color: #a6976e;
             color: black;
             border-radius: 1px;
             border: 3px solid #322917;
+            z-index: 1;
+        }
+
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            left: 27%;
+        }
+        .popup .popup-text {
+            visibility: hidden;
+            width: 550px;
+            height: 300px;
+            background-color: rgb(200, 200, 200);
+            color: black;
+            border-radius: 5px;
+            border: 8px solid black;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+            padding: 20px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: 75px;
+        }
+        .popup .popup-btn {
+            width: 300px;
+            margin-top: 50px;
+            text-align: center;
+            font-size: x-large;
+            z-index: 1;
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+            border: 3px solid black;
         }
 
         @font-face {
