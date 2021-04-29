@@ -14,7 +14,7 @@ function togglePlay() {
 
 function session_start() {
     sessionStorage.setItem("gold","Gold:0");
-    document.getElementsByTagName('div')[0].innerHTML = sessionStorage.getItem("gold");
+    document.getElementById("golden").innerHTML = sessionStorage.getItem("gold");
 }
 
 /* Combat Functions */
@@ -51,5 +51,5 @@ function beg() {
 }
 
 function goldtotal() {
-    document.getElementsByTagName('div')[0].innerHTML = sessionStorage.getItem("gold");
+    document.getElementById("golden").innerHTML = sessionStorage.getItem("gold");
 }
