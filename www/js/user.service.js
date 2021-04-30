@@ -1,32 +1,19 @@
 // Save database information for a user
-
-var berries;
-var bread;
-var characterName;
-var characterSex;
-var gold;
-var lastSave;
-var points;
-var porkchop;
+var userData = [];
 
 // Gets user data when a game is loaded
 function initData() {
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
-            var dataRef = firebase.database().ref("users/"+user.uid);
-            dataRef.once("value").then(function(snapshot) {
-                this.berries = snapshot.child("berries").value;
-                this.bread = snapshot.child("bread").val();
-                this.characterName = snapshot.child("characterName").val();
-                this.characterSex = snapshot.child("characterSex").val();
-                this.gold = snapshot.child("gold").val();
-                this.lastSave = snapshot.child("lastSave").val();
-                this.points = snapshot.child("points").val();
-                this.porkchop = snapshot.child("porkchop").val();
+            var dataRef = firebase.database().ref('users/'+user.uid);
+            dataRef.once('value', (snapshot) => {
+                snapshot.forEach((childSnapshot) => {
+                    userData.push(childSnapshot.val());
+                });
+                console.log(user.uid);
+                console.log(userData);
             });
                 document.getElementById('error-message').style.visibility = "hidden";
-                console.log(this.berries, this.bread, this.characterName, this.characterSex, this.gold, this.lastSave, this.points, this.porkchop);
-                console.log(user.uid);
         } else {
             console.log("Error: No data found. No user is signed in");
             document.getElementById('error-message').textContent = "Warning: User is not signed in, data cannot be saved.";
@@ -34,27 +21,35 @@ function initData() {
         }
     });
     // Event Listeners for Home Screen buttons
-    document.getElementById('load-game').addEventListener('click', loadGame, false);
+    document.getElementById('load-game').addEventListener('click', updatePoints, false); //Currently update points as data is not tracked across pages
     document.getElementById('new-game').addEventListener('click', checkSave, false);
     document.getElementById('popup-yes').addEventListener('click', popupYes, false);
     document.getElementById('popup-no').addEventListener('click', popupNo, false);
 }
 
+function updatePoints() {
+    firebase.auth().onAuthStateChanged(user => {
+        const points = document.getElementById('error-message').textContent;
+        firebase.database().ref('users/'+user.uid).update({
+            points: points
+        });
+        console.log("Points updated to "+points);
+    });
+    
+}
+
 function resetUserData() {
-    firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-            firebase.database().ref("users/"+user.uid).set({
-                characterName: "",
-                characterSex: "",
-                lastSave: "",
-                points: 0,
-                gold: 0,
-                porkchop: 0,
-                bread: 0,
-                berries: 0,
-                sword: 0
-            });
-        }
+    firebase.auth().onAuthStateChanged(user => {
+        firebase.database().ref("users/"+user.uid).set({
+            characterName: "default",
+            characterSex: "default",
+            lastSave: "default",
+            points: 0,
+            gold: 0,
+            porkchop: 0,
+            bread: 0,
+            berries: 0
+        });
     });
 }
 
