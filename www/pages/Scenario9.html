@@ -25,11 +25,8 @@
         <!--Right Side-->
         <div class="grid-container">
         <div class="grid-item">1</div>
-        <img src="../../images/Bread.jpg" width="80" height="80">
         <div class="grid-item">2</div>
-        <img src="../../images/Porkchop.jpg" width="80" height="80">
         <div class="grid-item">3</div>
-        <img src="../../images/Berries.jpg" width="80" height="80">
         <div class="grid-item">4</div>
         <div class="grid-item">5</div>
         <div class="grid-item">6</div>
@@ -38,6 +35,8 @@
         <div class="grid-item">9</div>
         <div class="grid-item">10</div>
         </div>
+        <progress id="health_hydra" value="200" max="200" style="position:fixed; left:15%; top:25%; width:250px; height:25px;"></progress>
+        <progress id="health_player" value="100" max="100" style="position:fixed; left:29%; background-color:crimson; top:30%; width:250px; height:25px;"></progress>
         <div class="scroll-container">
             <img src="../../images/Scroll_Without_Background.png">
             <p style="font-family:'Roman_SD'"><b> You walk along the shorter path, keeping an eye out for danger. After walking a short while, you come across a clearing that has a
@@ -45,8 +44,8 @@
                 depths of the lake, refusing to let you pass through peacefully.</b></p>
                 <a href="Scenario10a.html">
             <button class="btn-1" style="font-family:'Roman_SD'"><b>Ask the companion for help</b> </button>
-            <button class="btn-2" style="font-family:'Roman_SD'"> <b>Fight the hydra <br/> along with the companion</b> </button>
                 </a>
+            <button class="btn-2" onclick="attack_hydra()" style="font-family:'Roman_SD'"> <b>Fight the hydra <br/> along with the companion</b> </button>
         </div>
         <div id="golden" class="gold-box"></div>
             <div style="position:absolute; left:7%; top:4%;">
