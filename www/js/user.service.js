@@ -35,7 +35,16 @@ function updatePoints() {
         });
         console.log("Points updated to "+points);
     });
-    
+}
+
+function updateGold() {
+    firebase.auth().onAuthStateChanged(user => {
+        const gold = document.getElementById('golden').innerHTML;
+        firebase.database().ref('users/'+user.uid).update({
+            gold: gold
+        });
+        console.log("Gold updated to "+gold);
+    });
 }
 
 function resetUserData() {
