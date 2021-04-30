@@ -20,9 +20,12 @@ function session_start() {
 /* Combat Functions */
 function attack_hydra() {
     let health = document.getElementById("health_hydra")
-	health.value -= 60;
-	let health1 = document.getElementById("health_player")
-	health1.value -= 50;
+    health.value -= 60;
+    if (health.value <= 0) {
+	    window.location.href = "Scenario10a.html";
+    }
+    let health1 = document.getElementById("health_player")
+    health1.value -= 15;
 }
 
 function attack_cyclops() {
