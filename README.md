@@ -1,4 +1,4 @@
-# Choose your own adventure game
+# Choose Your Own Adventure game
 ## A web game designed for COMP 324 at Loyola University Chicago
 
 ### Members:
